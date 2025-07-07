@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+01-altdss/altdss_models.py 
+01-altdss/pydantic_complex.py
+.vscode
+
 # Distribution / packaging
 .Python
 build/

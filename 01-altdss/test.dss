@@ -1,0 +1,12 @@
+clear
+new Circuit.circuit
+new Line.line_1 Bus1=Bus1 Bus2=Bus2 Phases=3 RMatrix=(0.4 0.05 0.05 |0.05 0.4 0.05 |0.05 0.05 0.4 ) XMatrix=(1.2 0.3 0.3 |0.3 1.2 0.3 |0.3 0.3 1.2 ) CMatrix=(10.0 -2.0 -2.0 |-2.0 10.0 -2.0 |-2.0 -2.0 10.0 )
+new Line.line_2 Bus1=Bus1 Bus2=Bus2 Phases=3 R1=0.4 X1=1.2 R0=0.8 X0=2.5 C1=9.9 C0=3.0
+edit Vsource.source Bus1=Bus1 BasekV=13.2 pu=1.0001 Angle=30.0 Phases=3 MVASC3=20000.0 MVASC1=21000.0
+new Load.load_1 Phases=3 Bus1=Bus3 kV=13.2 kW=20.0 kvar=10.0
+new Load.load_2 Phases=3 Bus1=Bus2 kV=13.2 kW=40.0 PF=0.9
+MakeBusList
+SetkVBase Bus1 kVLL=13.2
+SetkVBase Bus2 kVLL=13.2
+SetkVBase Bus3 kVLL=13.2
+
